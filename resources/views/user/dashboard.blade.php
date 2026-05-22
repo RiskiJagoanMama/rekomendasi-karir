@@ -55,29 +55,68 @@
     <div class="navbar-content">
       <ul class="pc-navbar">
         <li class="pc-item">
-          <a href="../dashboard/index.html" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
-        </li>
-        <li class="pc-item">
-          <a href="../dashboard/index.html" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Minat & Skill</span></a>
-        </li>
-        <li class="pc-item">
-          <a href="../dashboard/index.html" class="pc-link"
+          <a href="../rekomendasi" class="pc-link"
             ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Rekomendasi</span></a>
         </li>
         <li class="pc-item">
-          <a href="../dashboard/index.html" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Profil</span></a>
+          <a href="../konsultasi" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Konsultasi</span></a>
         </li>
         <li class="pc-item">
-          <a href="../dashboard/index.html" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Keluar</span></a>
+          <a href="../user/history-konsultasi" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Histori Konsultasi</span></a>
+        </li>
+        <li class="pc-item">
+          <a href="{{ route('user.history')}}" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Histori</span></a>
         </li>
      </ul> 
     </div>
   </div>
 </nav>
+
+ <!-- [ Header Topbar ] start -->
+<header class="pc-header">
+
+  <div class="ms-auto">
+    <ul class="list-unstyled">
+      <li class="dropdown pc-h-item header-user-profile">
+        <a
+          class="pc-head-link head-link-primary dropdown-toggle arrow-none me-0"
+          data-bs-toggle="dropdown"
+          href="#"
+          role="button"
+          aria-haspopup="false"
+          aria-expanded="false"
+        >
+          <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+        </a>
+        <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
+          <div class="dropdown-header">
+            <h4>
+              Welcome,
+              <span class="small text-muted">{{ auth()->user()?->name }}</span>
+            </h4>
+            <p class="text-muted">Rekomendasi Karir</p>
+            <hr />
+            <div class="profile-notification-scroll position-relative" style="max-height: calc(100vh - 280px)">
+              <hr />
+              <form action="{{ route('logout') }}" method="POST" class="dropdown-item">
+                @csrf
+                <button type="submit" class="dropdown-item">
+                  <i class="ti ti-logout"></i>
+                  <span>Logout</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+</header>
+<!-- [ Header ] end -->
 
  <!-- Required Js -->
 <script src="{{ asset('assets/js/plugins/popper.min.js') }}"></script>
