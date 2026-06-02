@@ -49,18 +49,22 @@
  <!-- [ Sidebar Menu ] start -->
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
-    <div class="m-header">
+    <div class="m-header bg-teal-100">
         <h2>Konselor</h2>
     </div>
-    <div class="navbar-content">
+    <div class="navbar-content bg-teal-100">
       <ul class="pc-navbar">
         <li class="pc-item">
-          <a href="../konselor/konsultasi" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Konsultasi</span></a>
+            <a href="{{ route('konselor.dashboard') }}" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
         </li>
         <li class="pc-item">
-          <a href="{{ route('konselor.history')}}" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">History Karir User</span></a>
+            <a href="../konselor/konsultasi" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-alert-circle"></i></span><span class="pc-mtext">Konsultasi</span></a>
+        </li>
+        <li class="pc-item">
+            <a href="{{ route('konselor.history')}}" class="pc-link">
+              <span class="pc-micon"><i class="ti ti-history"></i></span><span class="pc-mtext">History Karir User</span></a>
         </li>
      </ul> 
     </div>
@@ -69,7 +73,6 @@
 
  <!-- [ Header Topbar ] start -->
 <header class="pc-header">
-
   <div class="ms-auto">
     <ul class="list-unstyled">
       <li class="dropdown pc-h-item header-user-profile">
@@ -81,7 +84,7 @@
           aria-haspopup="false"
           aria-expanded="false"
         >
-          <img src="../assets/images/user/avatar-2.jpg" alt="user-image" class="user-avtar" />
+          <img src="../assets/images/user/avatar-7.jpg" alt="user-image" class="user-avtar" />
         </a>
         <div class="dropdown-menu dropdown-user-profile dropdown-menu-end pc-h-dropdown">
           <div class="dropdown-header">

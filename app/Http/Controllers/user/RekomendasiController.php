@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Skill;
 use App\Models\Minat;
+use App\Models\History;
 
 class RekomendasiController extends Controller
 {
@@ -91,7 +92,7 @@ class RekomendasiController extends Controller
         $terbaik = $hasil[0];
 
         // SIMPAN HISTORY
-        \App\Models\History::create([
+        History::create([
 
             'user_id' => auth()->user()->id,
 
@@ -108,7 +109,7 @@ class RekomendasiController extends Controller
     // HISTORY USER
     public function history()
     {
-        $histories = \App\Models\History::where(
+        $histories = History::where(
             'user_id',
             auth()->user()->id
         )->latest()->get();
@@ -118,7 +119,7 @@ class RekomendasiController extends Controller
     }
     public function adminHistory()
 {
-    $histories = \App\Models\History::with('user')
+    $histories = History::with('user')
         ->latest()
         ->get();
 

@@ -31,7 +31,7 @@ class RegisterController extends Controller
         ]);
 
         return redirect()
-            ->to('/login')
+            ->to('/')
             ->with('success', 'Berhasil Membuat akun');
 
         

@@ -91,7 +91,7 @@
               <hr />
               <div class="d-flex flex-column align-items-center">
                 <h5 class="d-flex justify-content-center">Already have an account?</h5>
-                <a href="/login">Sign In</a>
+                <a href="/">Sign In</a>
               </div>
             </div>
           </div>

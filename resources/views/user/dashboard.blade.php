@@ -49,26 +49,33 @@
  <!-- [ Sidebar Menu ] start -->
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
-    <div class="m-header">
+    <div class="m-header bg-teal-100">
         <h2>User</h2>
     </div>
-    <div class="navbar-content">
+    <div class="navbar-content bg-teal-100">
       <ul class="pc-navbar">
+        <li class="pc-item active">
+          <a href="{{ route('user.dashboard') }}" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
+        </li>
         <li class="pc-item">
           <a href="../rekomendasi" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Rekomendasi</span></a>
+          ><span class="pc-micon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+          <path d="M0 0h24v24H0z" fill="none" />
+          <path fill="currentColor" d="M9 18h5.5q.425 0 .788-.213t.512-.587l2.1-4.9q.05-.125.075-.25T18 11.8V11q0-.425-.288-.713T17 10h-4.6l.6-3.4q.05-.25-.025-.475t-.25-.4L12 5l-4.6 5q-.2.2-.3.45T7 11v5q0 .825.588 1.413T9 18m3 4q-2.075 0-3.9-.788t-3.175-2.137T2.788 15.9T2 12t.788-3.9t2.137-3.175T8.1 2.788T12 2t3.9.788t3.175 2.137T21.213 8.1T22 12t-.788 3.9t-2.137 3.175t-3.175 2.138T12 22m0-2q3.35 0 5.675-2.325T20 12t-2.325-5.675T12 4T6.325 6.325T4 12t2.325 5.675T12 20m0-8" />
+          </svg></span><span class="pc-mtext">Rekomendasi</span></a>
         </li>
         <li class="pc-item">
           <a href="../konsultasi" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Konsultasi</span></a>
+            ><span class="pc-micon"><i class="ti ti-alert-circle"></i></span><span class="pc-mtext">Konsultasi</span></a>
         </li>
         <li class="pc-item">
           <a href="../user/history-konsultasi" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Histori Konsultasi</span></a>
+            ><span class="pc-micon"><i class="ti ti-history"></i></span><span class="pc-mtext">History Konsultasi</span></a>
         </li>
         <li class="pc-item">
           <a href="{{ route('user.history')}}" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Histori</span></a>
+            ><span class="pc-micon"><i class="ti ti-clipboard-list"></i></span><span class="pc-mtext">History</span></a>
         </li>
      </ul> 
     </div>
@@ -114,9 +121,42 @@
       </li>
     </ul>
   </div>
-
 </header>
 <!-- [ Header ] end -->
+<div class="pc-container">
+
+  <div class="pc-content">
+
+    <!-- Welcome -->
+    <div class="row">
+
+      <div class="col-md-12">
+
+        <div class="card">
+
+          <div class="card-body">
+
+            <h2>
+              Selamat Datang,
+              {{ auth()->user()->name }}
+            </h2>
+
+            <p>
+              Sistem Rekomendasi Karir berbasis metode SAW membantu Anda menemukan
+              pilihan karir terbaik berdasarkan minat dan skill yang dimiliki.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 
  <!-- Required Js -->
 <script src="{{ asset('assets/js/plugins/popper.min.js') }}"></script>
@@ -127,32 +167,24 @@
 <script src="{{ asset('assets/js/theme.js') }}"></script>
 <script src="{{ asset('assets/js/plugins/feather.min.js') }}"></script>
 
-   
 <script>
   layout_change('light');
 </script>
-   
 <script>
   font_change('Roboto');
 </script>
- 
 <script>
   change_box_container('false');
 </script>
- 
 <script>
   layout_caption_change('true');
-</script>
-   
+</script>  
 <script>
   layout_rtl_change('false');
 </script>
- 
 <script>
   preset_change('preset-1');
 </script>
-
-
 
     <!-- [Page Specific JS] start -->
     <!-- Apex Chart -->

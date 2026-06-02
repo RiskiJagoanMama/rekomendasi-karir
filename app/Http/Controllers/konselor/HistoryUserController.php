@@ -10,7 +10,7 @@ class HistoryUserController extends Controller
 {
     public function index()
     {
-        $histories = History::all();
+        $histories = History::with('user')->get();
         return view('konselor.history', compact('histories'));
     }
 }

@@ -3,41 +3,19 @@
   <!-- [Head] start -->
   <head>
     <title>Dashboard Admin</title>
-    <!-- [Meta] -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="description"
-      content="Berry is trending dashboard template made using Bootstrap 5 design framework. Berry is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies."
-    />
-    <meta
-      name="keywords"
-      content="Bootstrap admin template, Dashboard UI Kit, Dashboard Template, Backend Panel, react dashboard, angular dashboard"
-    />
-    <meta name="author" content="codedthemes" />
 
-    <!-- [Favicon] icon -->
-    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon" />
- <!-- [Google Font] Family -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" id="main-font-link" />
-<!-- [phosphor Icons] https://phosphoricons.com/ -->
-<link rel="stylesheet" href="{{asset('assets/fonts/phosphor/duotone/style.css')}}" />
-<!-- [Tabler Icons] https://tablericons.com -->
-<link rel="stylesheet" href="{{asset('assets/fonts/tabler-icons.min.css')}}" />
-<!-- [Feather Icons] https://feathericons.com -->
-<link rel="stylesheet" href="{{asset('assets/fonts/feather.css')}}" />
-<!-- [Font Awesome Icons] https://fontawesome.com/icons -->
-<link rel="stylesheet" href="{{asset('assets/fonts/fontawesome.css')}}" />
-<!-- [Material Icons] https://fonts.google.com/icons -->
-<link rel="stylesheet" href="{{asset('assets/fonts/material.css')}}" />
-<!-- [Template CSS Files] -->
-<link rel="stylesheet" href="../assets/css/style.css" id="main-style-link" />
-<link rel="stylesheet" href="{{ asset('assets/css/style-preset.css')}}" />
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+    <link rel="stylesheet" href="{{ asset('assets/fonts/phosphor/duotone/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/fonts/tabler-icons.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/fonts/feather.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/fonts/fontawesome.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/fonts/material.css') }}" />
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/style-preset.css') }}" />
   </head>
-  <!-- [Head] end -->
-  <!-- [Body] Start -->
   <body>
     <!-- [ Pre-loader ] start -->
 <div class="loader-bg">
@@ -49,46 +27,74 @@
  <!-- [ Sidebar Menu ] start -->
 <nav class="pc-sidebar">
   <div class="navbar-wrapper">
-    <div class="m-header">
+    <div class="m-header bg-teal-100">
         <h2>Admin</h2>
     </div>
-    <div class="navbar-content">
+    <div class="navbar-content bg-teal-100">
       <ul class="pc-navbar">
         <li class="pc-item">
-          <a href="/profile" class="btn btn-info"
-            >Profil</a>
+          <a href="{{ route('admin.dashboard') }}" class="pc-link"
+            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Dashboard</span></a>
         </li>
         <li class="pc-item">
         <a href="/admin/data-user" class="pc-link">
-          <span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Data User</span></a>
+          <span class="pc-micon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+          <path d="M0 0h48v48H0z" fill="none" />
+          <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+          <path d="M22 8v12c0 2.21-4.03 4-9 4s-9-1.79-9-4V8" />
+          <path d="M22 14c0 2.21-4.03 4-9 4s-9-1.79-9-4m18-6c0 2.21-4.03 4-9 4s-9-1.79-9-4s4.03-4 9-4s9 1.79 9 4m10-2h6a4 4 0 0 1 4 4v6M16 42h-6a4 4 0 0 1-4-4v-6" />
+          <circle cx="35" cy="29" r="5" />
+          <path d="M44 44H26a9 9 0 1 1 18 0" />
+          </g>
+          </svg></i></span><span class="pc-mtext">Data User</span></a>
         </li>
         <li class="pc-item">
         <a href="/admin/data-konselor" class="pc-link">
-          <span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Data Konselor</span></a>
+          <span class="pc-micon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+	<path d="M0 0h48v48H0z" fill="none" />
+	<defs>
+		<mask id="SVGloZNbXBY">
+			<g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+				<path d="M22 8v12c0 2.21-4.03 4-9 4s-9-1.79-9-4V8" />
+				<path d="M22 14c0 2.21-4.03 4-9 4s-9-1.79-9-4" />
+				<path fill="#555" d="M22 8c0 2.21-4.03 4-9 4s-9-1.79-9-4s4.03-4 9-4s9 1.79 9 4" />
+				<path d="M32 6h6a4 4 0 0 1 4 4v6M16 42h-6a4 4 0 0 1-4-4v-6" />
+				<circle cx="35" cy="29" r="5" fill="#555" />
+				<path fill="#555" d="M44 44H26a9 9 0 1 1 18 0" />
+          </g>
+          </mask>
+          </defs>
+          <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#SVGloZNbXBY)" />
+          </svg>
+          </i></span><span class="pc-mtext">Data Konselor</span></a>
         </li>
         <li class="pc-item">
           <a href="../minat" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Minat</span></a>
+            ><span class="pc-micon"><i class="ti ti-sitemap"></i></span><span class="pc-mtext">Minat</span></a>
         </li>
         <li class="pc-item">
           <a href="../skill" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Skill</span></a>
+            ><span class="pc-micon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32">
+	          <path d="M0 0h32v32H0z" fill="none" />
+	          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m18 13l8-11L8 13l6 6l-8 11l18-11Z" />
+            </svg>
+            </i></span><span class="pc-mtext">Skill</span></a>
         </li>
         <li class="pc-item">
           <a href="../karir" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Karir</span></a>
+            ><span class="pc-micon"><i class="ti ti-chart-bar"></i></span><span class="pc-mtext">Karir</span></a>
         </li>
         <li class="pc-item">
           <a href="../karir_skill" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Karir Skill</span></a>
+            ><span class="pc-micon"><i class="ti ti-toggle-left"></i></span><span class="pc-mtext">Karir Skill</span></a>
         </li>
         <li class="pc-item">
           <a href="../karir_minat" class="pc-link"
-            ><span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">Karir Minat</span></a>
+            ><span class="pc-micon"><i class="ti ti-toggle-right"></i></span><span class="pc-mtext">Karir Minat</span></a>
         </li>
         <li class="pc-item">
         <a href="/admin/history" class="pc-link">
-          <span class="pc-micon"><i class="ti ti-dashboard"></i></span><span class="pc-mtext">History User</span></a>
+          <span class="pc-micon"><i class="ti ti-clipboard-list"></i></span><span class="pc-mtext">History User</span></a>
         </li>
      </ul>
       
@@ -97,7 +103,6 @@
 </nav>
  <!-- [ Header Topbar ] start -->
 <header class="pc-header">
-
   <div class="ms-auto">
     <ul class="list-unstyled">
       <li class="dropdown pc-h-item header-user-profile">
@@ -134,7 +139,6 @@
       </li>
     </ul>
   </div>
-
 </header>
 <!-- [ Header ] end -->
 
