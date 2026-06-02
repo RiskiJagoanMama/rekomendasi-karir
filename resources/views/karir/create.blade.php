@@ -57,6 +57,19 @@
 				<path fill="#555" d="M44 44H26a9 9 0 1 1 18 0" />
           </g>
           </mask>
+
+
+
+
+
+
+
+
+
+
+
+
+          
           </defs>
           <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#SVGloZNbXBY)" />
           </svg>
